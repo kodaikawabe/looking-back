@@ -10,7 +10,7 @@
 
 - has_many :room_users
 - has_many :rooms, through: room_users
-- has_many :departments
+- has_many :reviews
 
 ## rooms テーブル
 
@@ -22,7 +22,7 @@
 
 - has_many :room_users
 - has_many :users, through: room_users
-- has_many :departments
+- has_many :reviews
 
 ## room_users テーブル
 
@@ -36,7 +36,7 @@
 - belongs_to :room
 - belongs_to :user
 
-## departments テーブル
+## reviews テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
