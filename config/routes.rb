@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'reviews/index'
   root to: "reviews#index"
   resources :users, only: [:edit, :update]
+  resources :rooms, only: [:new, :create]
 end
