@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
   def index
     @room = Room.find(params[:room_id])
+    @reviews = @room.reviews.includes(:user)
   end
 
   def new

@@ -1,0 +1,54 @@
+<div class="contents">
+   <div class="container">
+      <h1 class="sub-title">売場投稿</h1>
+         <%= form_with model: @review, url: room_reviews_path, local: true do |f| %>
+         <div class="img-upload">
+      <div class="weight-bold-text">
+        出品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+         <div class="form-wrap">
+            <div class="form-group">
+               <div class="form_text_wrap">
+                  <label class="form-text">タイトル</label>
+                     <%= f.text_field :name, class:"work-name"%>
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="form_text_wrap">
+                  <label class="form-text">グループ</label>
+                    <%= f.text_field :group, class:"work-rule" %>
+               </div>
+            </div>
+            <div class="form-group">
+                <div class="form_text_wrap">
+                  <label class="form-text">　売上　</label>
+                    <%= f.text_field :proceeds, class:"work-rule" %>
+               </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form_text_wrap">
+                  <label class="form-text">コメント</label>
+                    <%= f.text_area :comment, class:"work-rule" %>
+               </div>
+            </div>
+
+              <div class="form-submit">
+                 <div class="actions">
+                   <%= f.submit '保存', class:"submit-btn" %>
+                   <%= link_to '戻る', room_reviews_path, class:"submit-btn" %>
+                 </div>
+              </div>
+              
+           </div>
+        <% end %>
+    </div>
+</div>
