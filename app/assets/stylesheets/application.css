@@ -41,7 +41,6 @@
 .chat-header {
   height: 100px;
 }
-.messages {
-  background-color: #FAFAFA;
-  height: calc(100vh - 100px);
-}
+
+
+
